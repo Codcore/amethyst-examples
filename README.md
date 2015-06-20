@@ -1,6 +1,6 @@
-# examples
+# Amethyst examples
 
-TODO: Write a description here for library
+Application examples for [Amethyst web-framework](https://github.com/Codcore/amethyst)
 
 ## Installation
 
@@ -8,21 +8,22 @@ Add it to `Projectfile`
 
 ```crystal
 deps do
-  github "[your-github-name]/examples"
+  github "spalgner/crystal-mime"
+  github "Codcore/amethyst"
+  github "Codcore/examples"
 end
 ```
 
 ## Usage
+To play with examples, run them from amethyst-examples dir:
 
-```crystal
-require "examples"
 ```
-
-TODO: Write usage here for library
+crystal src/test.cr
+```
 
 ## Development
 
-TODO: Write instructions for development
+Feel free to add your own apps written in Amethyst
 
 ## Contributing
 
@@ -34,4 +35,4 @@ TODO: Write instructions for development
 
 ## Contributors
 
-- [your-github-name](https://github.com/[your-github-name]) codcore - creator, maintainer
+- [Codcore](https://github.com/Codcore) codcore - creator, maintainer
