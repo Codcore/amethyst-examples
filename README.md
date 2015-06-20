@@ -10,7 +10,7 @@ Add it to `Projectfile`
 deps do
   github "spalger/crystal-mime"
   github "Codcore/amethyst"
-  github "Codcore/examples"
+  github "Codcore/amethyst-examples"
 end
 ```
 
