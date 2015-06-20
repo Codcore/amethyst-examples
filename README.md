@@ -8,7 +8,7 @@ Add it to `Projectfile`
 
 ```crystal
 deps do
-  github "spalgner/crystal-mime"
+  github "spalger/crystal-mime"
   github "Codcore/amethyst"
   github "Codcore/examples"
 end
