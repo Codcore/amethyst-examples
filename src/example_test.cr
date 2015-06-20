@@ -7,7 +7,7 @@ class WordController < Base::Controller
   def hello
     name = "World"
     respond_to do |format|
-      puts "COOKIE: #{request.cookies}"
+      puts request.cookies.to_s
       format.html { render "hello", name }
     end
   end
