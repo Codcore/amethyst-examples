@@ -4,7 +4,7 @@ class TestController < Base::Controller
   actions :index, :user
 
   def index
-    html "Hello world!<img src='/examples/assets/amethyst.png'>  #{Base::App.settings.app_dir}"
+    html "Hello world!<img src='/assets/amethyst.png'>  #{Base::App.settings.app_dir}"
 
     response.cookie "session", "Amethyst"
     response.cookie "name", "Andrew"
@@ -19,7 +19,7 @@ end
 class TestApp < Base::App
   settings.configure do |conf|
     conf.environment = "production"
-    conf.static_dirs = [ "/examples/assets"]
+    conf.static_dirs = [ "/assets"]
   end
 
   routes.draw do
