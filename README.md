@@ -1,5 +1,5 @@
 # Amethyst examples
-
+Examples is not working with current Amethyst master branch. They will be updated with new Amethyst release.
 Application examples for [Amethyst web-framework](https://github.com/Codcore/amethyst)
 
 ## Installation
