@@ -21,18 +21,17 @@ module MyModule
       html "Hello world!<img src='/assets/amethyst.png'>"
     end
 
-    view "hello", "#{__DIR__}/views", name
+    view "hello", "#{__DIR__}/views"
     def hello
       @name = "Andrew"
       respond_to do |format|
-        format.any  { render "hello", @name } 
-        format.html { render "hello", @name }
+        format.any  { render "hello" } 
+        format.html { render "hello" }
       end
     end
 
     def user
-      html "Hello from user #{request.path_parameters["id"]} \n
-      #{Base::App.settings.app_dir}"
+      html "Hello from user #{request.path_parameters["id"]}"
     end
 
     def redirect
@@ -46,13 +45,14 @@ module MyModule
   class MyApp < Base::App
 
     settings.configure do |conf|
-      conf.environment = "production"
+      conf.environment = "development"
+      conf.static_dirs = ["/assets", "/css", "/js"]
     end
 
     routes.draw do
       get  "/user/:id", "test#user"
-      post "/post/", "test#index"
-      all  "/", "test#hello"
+      get  "/", "test#index"
+      all  "/hello", "test#hello"
       register TestController
     end
 
