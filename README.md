@@ -4,7 +4,14 @@ Application examples for [Amethyst web-framework](https://github.com/Codcore/ame
 
 ## Installation
 
-Add it to `Projectfile`
+Create a directory from scratch:
+
+```
+mkdir my-amethyst
+cd my-amethyst
+```
+
+Create a `Projectfile`, in which add:
 
 ```crystal
 deps do
@@ -14,12 +21,23 @@ deps do
 end
 ```
 
-## Usage
-To play with examples, run them from amethyst-examples dir:
+and run:
 
 ```
-crystal src/test.cr
+crystal deps
 ```
+
+to install packages.
+
+## Start Server
+
+Start server from the root of the project directory:
+
+```
+crystal libs/amethyst-examples/test.cr
+```
+
+Thus the server should be listening to `localhost:8080`.
 
 ## Development
 
